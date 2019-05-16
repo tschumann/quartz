@@ -1,18 +1,27 @@
 package engine;
 
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.List;
 
 public class World {
 
-    private Collection<IEntity> entities;
+    private List<IEntity> entities;
     private Map map;
 
     public World() {
         this.entities = new ArrayList<IEntity>();
     }
 
-    public void setMap(Map map) {
+    public void loadMap(Map map) {
         this.map = map;
+
+        List<IEntity> mapEntities = this.map.getEntities();
+        for (IEntity entity: mapEntities) {
+            this.addEntity(entity);
+        }
+    }
+
+    public void addEntity(IEntity entity) {
+        this.entities.add(entity);
     }
 }
