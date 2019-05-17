@@ -11,4 +11,8 @@ public class Vector {
         this.y = y;
         this.z = z;
     }
+
+    public String toString() {
+        return "(" + String.valueOf(this.x) + "," + String.valueOf(this.y) + "," + String.valueOf(this.z) + ")";
+    }
 }

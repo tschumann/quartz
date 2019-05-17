@@ -22,4 +22,8 @@ public class Entity implements IEntity{
     public Vector getPosition() {
         return this.position;
     }
+
+    public String toString() {
+        return this.className + " " + this.position;
+    }
 }
