@@ -1,1 +1,1 @@
-java -cp "out/production/jengine" engine.Main map %1 %2 %3 %4 %5 %6 %7 %8 %9
+java -cp "out/production/quartz" engine.Main map %1 %2 %3 %4 %5 %6 %7 %8 %9
