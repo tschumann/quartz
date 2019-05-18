@@ -1,6 +1,6 @@
 package engine;
 
-class Logger {
+public class Logger {
 
     private static Logger logger = null;
 
