@@ -6,6 +6,8 @@ public class Main {
 
     public static void main(String args[]) throws EngineException {
         World world = new World();
+        Server server = new Server();
+        server.setWorld(world);
 
         String mapname = "";
 
@@ -23,5 +25,11 @@ public class Main {
 
         System.out.println("Loading map " + mapname);
         Map map = new Map(mapname);
+        world.loadMap(map);
+        System.out.println("Server running map " + server.getMapName());
+
+        while (server.shouldRun()) {
+            server.mainLoop();
+        }
     }
 }

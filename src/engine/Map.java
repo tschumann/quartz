@@ -65,4 +65,8 @@ public class Map {
     public List<IEntity> getEntities() {
         return this.entities;
     }
+
+    public String getName() {
+        return this.mapname;
+    }
 }

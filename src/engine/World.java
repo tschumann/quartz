@@ -21,7 +21,15 @@ public class World {
         }
     }
 
+    public String getMapName() {
+        return this.map.getName();
+    }
+
     public void addEntity(IEntity entity) {
         this.entities.add(entity);
+    }
+
+    public List<IEntity> getEntities() {
+        return this.entities;
     }
 }

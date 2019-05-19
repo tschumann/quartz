@@ -6,4 +6,5 @@ public interface IEntity {
 
     public String getClassName();
     public Vector getPosition();
+    public void think();
 }

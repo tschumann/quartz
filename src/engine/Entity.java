@@ -26,4 +26,7 @@ public class Entity implements IEntity{
     public String toString() {
         return this.className + " " + this.position;
     }
+
+    public void think() {
+    }
 }
