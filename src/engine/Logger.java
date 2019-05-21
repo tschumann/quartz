@@ -18,4 +18,8 @@ public class Logger {
     public void Info(String message) {
         System.out.println(message);
     }
+
+    public void Error(String message) {
+        System.err.println(message);
+    }
 }

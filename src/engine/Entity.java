@@ -2,7 +2,7 @@ package engine;
 
 import engine.common.Vector;
 
-public class Entity implements IEntity{
+public class Entity implements IEntity {
 
     private String className;
     private Vector position;
