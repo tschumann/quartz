@@ -6,6 +6,7 @@ public class Entity implements IEntity {
 
     private String className;
     private Vector position;
+    private Vector angles;
 
     public void setClassName(String className) {
         this.className = className;
@@ -19,8 +20,16 @@ public class Entity implements IEntity {
         this.position = position;
     }
 
+    public void setAngles(Vector angles) {
+        this.angles = angles;
+    }
+
     public Vector getPosition() {
         return this.position;
+    }
+
+    public Vector getAngles() {
+        return this.angles;
     }
 
     public String toString() {
