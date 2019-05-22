@@ -23,25 +23,15 @@ public class Version1MapLoader extends BaseMapLoader {
                 continue;
             }
 
-            IEntity entity;
+            IEntity entity = this.getEntityFromName(parts[0]);
 
-            try {
-                entity = (IEntity)Class.forName("game." + parts[0]).newInstance();
+            if (entity != null) {
+                entity.setClassName(parts[0]);
+                entity.setPosition(new Vector(new Float(parts[1]), new Float(parts[2]), new Float(parts[3])));
+                entity.setAngles(new Vector(new Float(parts[4]), new Float(parts[5]), new Float(parts[6])));
+                this.logger.Debug("Adding " + entity);
+                this.entities.add(entity);
             }
-            catch (ClassNotFoundException e) {
-                this.logger.Error("Unknown entity " + parts[0]);
-                continue;
-            }
-            catch (InstantiationException|IllegalAccessException e) {
-                this.logger.Error("Unable to instantiate " + parts[0]);
-                continue;
-            }
-
-            entity.setClassName(parts[0]);
-            entity.setPosition(new Vector(new Float(parts[1]), new Float(parts[2]), new Float(parts[3])));
-            entity.setAngles(new Vector(new Float(parts[4]), new Float(parts[5]), new Float(parts[6])));
-            this.logger.Debug("Adding " + entity);
-            this.entities.add(entity);
         }
     }
 }

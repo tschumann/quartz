@@ -1,6 +1,7 @@
 package engine;
 
 import engine.exceptions.EngineException;
+import engine.map.Map;
 
 public class Main {
 

@@ -1,5 +1,7 @@
 package engine;
 
+import engine.map.Map;
+
 import java.util.ArrayList;
 import java.util.List;
 

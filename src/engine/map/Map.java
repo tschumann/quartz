@@ -1,5 +1,7 @@
-package engine;
+package engine.map;
 
+import engine.IEntity;
+import engine.Logger;
 import engine.common.Vector;
 import engine.exceptions.EngineException;
 import engine.map.IMapLoader;

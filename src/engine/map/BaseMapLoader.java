@@ -16,6 +16,22 @@ public abstract class BaseMapLoader implements IMapLoader {
         this.entities = new ArrayList<IEntity>();
     }
 
+    public IEntity getEntityFromName(String name) {
+        IEntity entity = null;
+
+        try {
+            entity = (IEntity)Class.forName("game." + name).newInstance();
+        }
+        catch (ClassNotFoundException e) {
+            this.logger.Error("Unknown entity " + name);
+        }
+        catch (InstantiationException|IllegalAccessException e) {
+            this.logger.Error("Unable to instantiate " + name);
+        }
+
+        return entity;
+    }
+
     public List<IEntity> getEntities() {
         return this.entities;
     }
