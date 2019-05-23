@@ -1,6 +1,6 @@
-package engine;
+package quartz.engine;
 
-import engine.map.Map;
+import quartz.engine.map.Map;
 
 import java.util.ArrayList;
 import java.util.List;

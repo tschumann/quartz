@@ -1,7 +1,7 @@
-package engine.map;
+package quartz.engine.map;
 
-import engine.IEntity;
-import engine.Logger;
+import quartz.engine.IEntity;
+import quartz.engine.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ public abstract class BaseMapLoader implements IMapLoader {
         IEntity entity = null;
 
         try {
-            entity = (IEntity)Class.forName("game." + name).newInstance();
+            entity = (IEntity)Class.forName("main.java.quartz.game." + name).newInstance();
         }
         catch (ClassNotFoundException e) {
             this.logger.Error("Unknown entity " + name);

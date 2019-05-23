@@ -1,4 +1,4 @@
-package engine.exceptions;
+package quartz.engine.exceptions;
 
 public class EngineException extends Exception {
 

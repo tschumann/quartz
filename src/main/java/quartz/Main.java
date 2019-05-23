@@ -1,7 +1,9 @@
-package engine;
+package quartz;
 
-import engine.exceptions.EngineException;
-import engine.map.Map;
+import quartz.engine.Server;
+import quartz.engine.World;
+import quartz.engine.exceptions.EngineException;
+import quartz.engine.map.Map;
 
 public class Main {
 

@@ -1,6 +1,6 @@
-package game;
+package quartz.game;
 
-import engine.Entity;
+import quartz.engine.Entity;
 
 public class SpawnEntity extends Entity {
 

@@ -1,10 +1,8 @@
-package engine.map;
+package quartz.engine.map;
 
-import engine.IEntity;
-import engine.Logger;
-import engine.common.Vector;
-import engine.exceptions.EngineException;
-import engine.map.IMapLoader;
+import quartz.engine.IEntity;
+import quartz.engine.Logger;
+import quartz.engine.exceptions.EngineException;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -43,7 +41,7 @@ public class Map {
             IMapLoader mapLoader;
 
             try {
-                mapLoader = (IMapLoader)Class.forName("engine.map.Version" + version + "MapLoader").newInstance();
+                mapLoader = (IMapLoader)Class.forName("main.java.quartz.engine.map.Version" + version + "MapLoader").newInstance();
             }
             catch (ClassNotFoundException e) {
                 throw new EngineException("Unknown map version");

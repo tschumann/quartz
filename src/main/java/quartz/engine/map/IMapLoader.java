@@ -1,6 +1,6 @@
-package engine.map;
+package quartz.engine.map;
 
-import engine.IEntity;
+import quartz.engine.IEntity;
 
 import java.io.BufferedReader;
 import java.io.IOException;

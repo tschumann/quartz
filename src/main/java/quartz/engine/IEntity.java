@@ -1,6 +1,6 @@
-package engine;
+package quartz.engine;
 
-import engine.common.Vector;
+import quartz.engine.common.Vector;
 
 public interface IEntity {
 

@@ -2,4 +2,9 @@
 .idea/tasks.xml
 .idea/usage.statistics.xml
 .idea/workspace.xml
-out/
+.idea/libraries/
+
+.gradle
+
+build
+out
