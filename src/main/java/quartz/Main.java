@@ -16,7 +16,7 @@ public class Main {
 
         for (int i = 0; i < args.length; i++) {
             if (args[i].equals("map")) {
-                if (args.length > i) {
+                if ((i + 1 ) < args.length) {
                     mapname = args[i + 1];
                 }
             }
