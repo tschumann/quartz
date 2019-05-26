@@ -24,6 +24,14 @@ public class Vector {
         return this.z;
     }
 
+    public float distanceBetween(Vector vector) {
+        float xComponentDifference = (this.x - vector.x);
+        float yComponentDifference = (this.y - vector.y);
+        float zComponentDifference = (this.z - vector.z);
+
+        return (float)Math.sqrt((xComponentDifference * xComponentDifference) + (yComponentDifference * yComponentDifference) + (zComponentDifference * zComponentDifference));
+    }
+
     public String toString() {
         return "(" + String.valueOf(this.x) + "," + String.valueOf(this.y) + "," + String.valueOf(this.z) + ")";
     }

@@ -1,9 +1,12 @@
 package quartz.engine;
 
+import quartz.engine.common.Vector;
 import quartz.engine.map.Map;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class World {
 
@@ -33,5 +36,15 @@ public class World {
 
     public List<IEntity> getEntities() {
         return this.entities;
+    }
+
+    public List<IEntity> getEntitiesInRadius(Vector position, float radius) {
+        IEntity entities[] = this.entities.toArray(new Entity[this.entities.size()]);
+
+        List<IEntity> entitiesInRadius = Stream.of(entities)
+                .filter(e -> Math.abs(e.getPosition().distanceBetween(position)) < radius)
+                .collect(Collectors.toList());
+
+        return entitiesInRadius;
     }
 }
