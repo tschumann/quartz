@@ -12,6 +12,18 @@ public class Vector {
         this.z = z;
     }
 
+    public float getRoll() {
+        return this.x;
+    }
+
+    public float getPitch() {
+        return this.y;
+    }
+
+    public float getYaw() {
+        return this.z;
+    }
+
     public String toString() {
         return "(" + String.valueOf(this.x) + "," + String.valueOf(this.y) + "," + String.valueOf(this.z) + ")";
     }
