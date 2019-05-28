@@ -12,6 +12,12 @@ public class Vector {
         this.z = z;
     }
 
+    public Vector(Vector vector) {
+        this.x = vector.x;
+        this.y = vector.y;
+        this.z = vector.z;
+    }
+
     public float getRoll() {
         return this.x;
     }

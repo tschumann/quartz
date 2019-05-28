@@ -25,11 +25,11 @@ public class Entity implements IEntity {
     }
 
     public Vector getPosition() {
-        return this.position;
+        return new Vector(this.position);
     }
 
     public Vector getAngles() {
-        return this.angles;
+        return new Vector(this.angles);
     }
 
     public String toString() {

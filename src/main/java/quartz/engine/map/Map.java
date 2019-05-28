@@ -63,7 +63,8 @@ public class Map {
     }
 
     public List<IEntity> getEntities() {
-        return this.entities;
+        // don't return a reference to the internal entity list
+        return new ArrayList<IEntity>(this.entities);
     }
 
     public String getName() {

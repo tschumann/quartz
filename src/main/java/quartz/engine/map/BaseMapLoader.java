@@ -33,6 +33,7 @@ public abstract class BaseMapLoader implements IMapLoader {
     }
 
     public List<IEntity> getEntities() {
-        return this.entities;
+        // don't return a reference to the internal entity list
+        return new ArrayList<IEntity>(this.entities);
     }
 }
