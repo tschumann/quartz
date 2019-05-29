@@ -20,7 +20,7 @@ public abstract class BaseMapLoader implements IMapLoader {
         IEntity entity = null;
 
         try {
-            entity = (IEntity)Class.forName("main.java.quartz.game." + name).newInstance();
+            entity = (IEntity)Class.forName("quartz.game." + name).newInstance();
         }
         catch (ClassNotFoundException e) {
             this.logger.Error("Unknown entity " + name);

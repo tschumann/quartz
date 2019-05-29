@@ -3,22 +3,20 @@ package quartz.engine.map;
 import quartz.engine.IEntity;
 import quartz.engine.common.Vector;
 
-import java.io.BufferedReader;
-import java.io.IOException;
+import java.util.List;
 
 public class Version1MapLoader extends BaseMapLoader {
 
     public static int ENTITY_PARTS_COUNT = 7;
 
-    // TODO: pass something better than a reader?
-    public void loadMap(BufferedReader reader) throws IOException {
-        String line;
-
-        while ((line = reader.readLine()) != null) {
+    public void loadMap(List<String> lines) {
+        // start from line 1 because line 0 is the version information
+        for (int i = 1; i < lines.size(); i++) {
+            String line = lines.get(i);
             String parts[] = line.split(",");
 
             if (parts.length != ENTITY_PARTS_COUNT) {
-                // TODO: ideally put line number in here - instantiate reader in this method to do that?
+                // TODO: ideally put line number in here
                 this.logger.Error("Entity declaration was " + parts.length + " items: expected " + ENTITY_PARTS_COUNT);
                 continue;
             }
