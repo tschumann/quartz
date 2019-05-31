@@ -10,12 +10,16 @@ public class Server {
     private long frames;
     private float framesPerSecond;
 
+    private boolean shouldQuit;
+
     public Server() {
         this.elapsed = 0;
         this.seconds = 0;
         this.ticks = 0;
         this.frames = 0;
         this.framesPerSecond = 0;
+
+        this.shouldQuit = false;
     }
 
     public void setWorld(World world) {
@@ -44,8 +48,18 @@ public class Server {
         this.frames++;
     }
 
+    public boolean handleCommand(String command) {
+        boolean handled = false;
+
+        if (command.equals("quit")) {
+            handled = true;
+            this.shouldQuit = true;
+        }
+
+        return handled;
+    }
+
     public boolean shouldRun() {
-        // TODO: expand on this
-        return true;
+        return this.shouldQuit;
     }
 }
