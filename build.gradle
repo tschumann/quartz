@@ -37,5 +37,12 @@ jar {
     }
 }
 
+test {
+    testLogging {
+        outputs.upToDateWhen {false}
+        showStandardStreams = true
+    }
+}
+
 // Define the main class for the application
 mainClassName = 'quartz.Main'
