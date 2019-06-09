@@ -60,6 +60,6 @@ public class Server {
     }
 
     public boolean shouldRun() {
-        return this.shouldQuit;
+        return !this.shouldQuit;
     }
 }

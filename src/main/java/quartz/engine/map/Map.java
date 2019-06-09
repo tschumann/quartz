@@ -52,7 +52,32 @@ public class Map {
                 throw new EngineException("Problem instantiating map loader");
             }
 
-            mapLoader.loadMap(this.lines);
+            boolean inEntitySection = false;
+            int entitiesStartLine = -1; // make the default something that will break if it gets through
+            List<String> entities = new ArrayList<String>();
+
+            // start from 1 to skip the version information
+            for (int i = 1; i < lines.size(); i++) {
+                String line = lines.get(i);
+                int lineNumber = i + 1;
+                if (line.equals("entities")) {
+                    if (inEntitySection) {
+                        throw new EngineException("Encountered entities marker in entities block");
+                    } else {
+                        inEntitySection = true;
+                        entitiesStartLine = lineNumber;
+                        continue;
+                    }
+                } else if (line.equals("end")) {
+                    break;
+                } else {
+                    entities.add(line);
+                }
+            }
+
+            EntitySection entitySection = new EntitySection(entitiesStartLine, entities);
+
+            mapLoader.loadEntities(entitySection);
             this.entities.addAll(mapLoader.getEntities());
 
             this.logger.Debug("Map " + this.mapName + " has " + this.entities.size() + " entities");

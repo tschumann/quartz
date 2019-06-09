@@ -9,16 +9,14 @@ public class Version1MapLoader extends BaseMapLoader {
 
     public static int ENTITY_PARTS_COUNT = 7;
 
-    public void loadMap(List<String> lines) {
-        // start from line 1 because line 0 is the version information
-        // TODO: should probably fix this to not rely on the version string being element 0
-        for (int i = 1; i < lines.size(); i++) {
-            int lineNumber = i + 1;
+    public void loadEntities(EntitySection entitySection) {
+        List<String> lines = entitySection.getLines();
+        for (int i = 0; i < lines.size(); i++) {
+            int lineNumber = entitySection.getStartLine() + i;
             String line = lines.get(i);
             String parts[] = line.split(",");
 
             if (parts.length != ENTITY_PARTS_COUNT) {
-                // TODO: ideally put line number in here
                 this.logger.Error("Entity declaration on line " + lineNumber + " was " + parts.length + " items: expected " + ENTITY_PARTS_COUNT);
                 continue;
             }

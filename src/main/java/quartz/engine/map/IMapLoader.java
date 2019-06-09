@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface IMapLoader {
 
-    public void loadMap(List<String> lines);
+    public void loadEntities(EntitySection entitySection);
     public List<IEntity> getEntities();
 }
