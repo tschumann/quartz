@@ -1,7 +1,7 @@
 package quartz.engine.map;
 
 import quartz.engine.IEntity;
-import quartz.engine.Logger;
+import quartz.engine.Console;
 import quartz.engine.exceptions.EngineException;
 
 import java.io.IOException;
@@ -12,13 +12,13 @@ import java.util.List;
 
 public class Map {
 
-    private Logger logger;
+    private Console logger;
     private String mapName;
     private List<String> lines;
     private List<IEntity> entities;
 
     public Map(String mapname) throws EngineException {
-        this.logger = Logger.getLogger();
+        this.logger = Console.getLogger();
         this.mapName = mapname;
         this.entities = new ArrayList<IEntity>();
 

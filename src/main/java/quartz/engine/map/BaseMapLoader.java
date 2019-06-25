@@ -1,18 +1,18 @@
 package quartz.engine.map;
 
 import quartz.engine.IEntity;
-import quartz.engine.Logger;
+import quartz.engine.Console;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class BaseMapLoader implements IMapLoader {
 
-    protected Logger logger;
+    protected Console logger;
     protected List<IEntity> entities;
 
     public BaseMapLoader() {
-        this.logger = Logger.getLogger();
+        this.logger = Console.getLogger();
         this.entities = new ArrayList<IEntity>();
     }
 
