@@ -29,6 +29,12 @@ jar {
     }
 }
 
+sourceSets {
+	test {
+		java.srcDirs = ['src/main/', 'src/test/']
+	}
+}
+
 test {
     testLogging {
         outputs.upToDateWhen {false}
