@@ -1,9 +1,7 @@
 plugins {
-    // Apply the java plugin to add support for Java
     id 'java'
-
-    // Apply the application plugin to add support for building an application
     id 'application'
+    id 'jacoco'
 }
 
 repositories {
@@ -41,6 +39,20 @@ test {
         showStandardStreams = true
     }
 }
+
+jacoco {
+    toolVersion = "0.8.5"
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.enabled true
+    }
+}
+
+test.finalizedBy jacocoTestReport
 
 // Define the main class for the application
 mainClassName = 'quartz.Main'
