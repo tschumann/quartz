@@ -30,6 +30,26 @@ public class Vector {
         return this.z;
     }
 
+    public void set(float x, float y, float z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+
+        if (!(obj instanceof Vector)) {
+            return false;
+        }
+
+        Vector vec = (Vector)obj;
+
+        return (Math.abs(this.getRoll() - vec.getRoll()) < 0.0001) && (Math.abs(this.getPitch() - vec.getPitch()) < 0.0001) && (Math.abs(this.getYaw() - vec.getYaw()) < 0.0001);
+    }
+
     public float distanceBetween(Vector vector) {
         float xComponentDifference = (this.x - vector.x);
         float yComponentDifference = (this.y - vector.y);

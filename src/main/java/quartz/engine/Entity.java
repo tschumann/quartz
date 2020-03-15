@@ -8,6 +8,11 @@ public class Entity implements IEntity {
     private Vector position;
     private Vector angles;
 
+    public Entity() {
+        this.position = new Vector(0, 0, 0);
+        this.angles = new Vector(0, 0, 0);
+    }
+
     public void setClassName(String className) {
         this.className = className;
     }

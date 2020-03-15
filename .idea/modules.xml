@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/quartz.iml" filepath="$PROJECT_DIR$/.idea/modules/quartz.iml" group="quartz" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/quartz_main.iml" filepath="$PROJECT_DIR$/.idea/modules/quartz_main.iml" group="quartz" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/quartz_test.iml" filepath="$PROJECT_DIR$/.idea/modules/quartz_test.iml" group="quartz" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/quartz.iml" filepath="$PROJECT_DIR$/.idea/modules/quartz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/quartz.main.iml" filepath="$PROJECT_DIR$/.idea/modules/quartz.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/quartz.test.iml" filepath="$PROJECT_DIR$/.idea/modules/quartz.test.iml" />
     </modules>
   </component>
 </project>

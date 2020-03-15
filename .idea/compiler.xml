@@ -2,6 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="quartz.main" target="13" />
+      <module name="quartz.test" target="13" />
       <module name="quartz_main" target="1.8" />
       <module name="quartz_test" target="1.8" />
     </bytecodeTargetLevel>
