@@ -47,7 +47,7 @@ public class Vector {
 
         Vector vec = (Vector)obj;
 
-        return (Math.abs(this.getRoll() - vec.getRoll()) < 0.0001) && (Math.abs(this.getPitch() - vec.getPitch()) < 0.0001) && (Math.abs(this.getYaw() - vec.getYaw()) < 0.0001);
+        return (Math.abs(this.getRoll() - vec.getRoll()) < Maths.EPSILON) && (Math.abs(this.getPitch() - vec.getPitch()) < Maths.EPSILON) && (Math.abs(this.getYaw() - vec.getYaw()) < Maths.EPSILON);
     }
 
     public float distanceBetween(Vector vector) {
