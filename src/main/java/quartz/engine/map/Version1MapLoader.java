@@ -1,9 +1,8 @@
 package quartz.engine.map;
 
+import java.util.List;
 import quartz.engine.IEntity;
 import quartz.engine.common.Vector;
-
-import java.util.List;
 
 public class Version1MapLoader extends BaseMapLoader {
 

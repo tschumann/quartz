@@ -1,8 +1,7 @@
 package quartz.engine;
 
+import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class ServerTest {
 
@@ -10,7 +9,7 @@ public class ServerTest {
     public void testHandleCommand() {
         Server server = new Server();
 
-        assertTrue(server.handleCommand("quit"));
-        assertFalse(server.handleCommand("nuke"));
+        Assert.assertTrue(server.handleCommand("quit"));
+        Assert.assertFalse(server.handleCommand("nuke"));
     }
 }

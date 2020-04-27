@@ -1,11 +1,9 @@
 package quartz.engine;
 
-import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.Arrays;
-
-import static org.junit.Assert.*;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class ConsoleTest {
 
@@ -13,8 +11,8 @@ public class ConsoleTest {
     public void testHandleCommand() {
         Console console = new Console();
 
-        assertFalse(console.handleCommand("quit"));
-        assertFalse(console.handleCommand("nuke"));
+        Assert.assertFalse(console.handleCommand("quit"));
+        Assert.assertFalse(console.handleCommand("nuke"));
     }
 
     @Test
@@ -25,6 +23,6 @@ public class ConsoleTest {
         console.Info("another message");
         console.Error("an error");
 
-        assertEquals(console.getOutput(), new ArrayList<String>(Arrays.asList("a message", "another message", "an error")));
+        Assert.assertEquals(console.getOutput(), new ArrayList<String>(Arrays.asList("a message", "another message", "an error")));
     }
 }

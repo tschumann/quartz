@@ -1,8 +1,7 @@
 package quartz.engine.map;
 
-import quartz.engine.IEntity;
-
 import java.util.List;
+import quartz.engine.IEntity;
 
 public interface IMapLoader {
 

@@ -1,10 +1,9 @@
 package quartz.engine.map;
 
-import quartz.engine.IEntity;
-import quartz.engine.Console;
-
 import java.util.ArrayList;
 import java.util.List;
+import quartz.engine.IEntity;
+import quartz.engine.Console;
 
 public abstract class BaseMapLoader implements IMapLoader {
 

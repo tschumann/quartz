@@ -1,14 +1,13 @@
 package quartz.engine.map;
 
-import quartz.engine.IEntity;
-import quartz.engine.Console;
-import quartz.engine.exceptions.EngineException;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import quartz.engine.IEntity;
+import quartz.engine.Console;
+import quartz.engine.exceptions.EngineException;
 
 public class Map {
 
