@@ -23,10 +23,15 @@ jar {
     }
 }
 
+// this is a big hack because Gradle can't find the classes in src/main when compiling src/test
 sourceSets {
 	test {
 		java.srcDirs = ['src/main/', 'src/test/']
 	}
+}
+
+tasks.withType(JavaCompile).all {
+    options.compilerArgs.add("-Xlint:all")
 }
 
 test {
