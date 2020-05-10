@@ -24,8 +24,8 @@ public class Version1MapLoader extends BaseMapLoader {
 
             if (entity != null) {
                 entity.setClassName(parts[0]);
-                entity.setPosition(new Vector(new Float(parts[1]), new Float(parts[2]), new Float(parts[3])));
-                entity.setAngles(new Vector(new Float(parts[4]), new Float(parts[5]), new Float(parts[6])));
+                entity.setPosition(new Vector(Float.parseFloat(parts[1]), Float.parseFloat(parts[2]), Float.parseFloat(parts[3])));
+                entity.setAngles(new Vector(Float.parseFloat(parts[4]), Float.parseFloat(parts[5]), Float.parseFloat(parts[6])));
                 this.logger.Debug("Adding " + entity);
                 this.entities.add(entity);
             } else {

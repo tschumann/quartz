@@ -1,7 +1,7 @@
 package quartz.engine;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import quartz.engine.common.Vector;
 
 public class EntityTest {
@@ -12,11 +12,11 @@ public class EntityTest {
 
         Vector angles = entity.getAngles();
 
-        Assert.assertTrue(angles.equals(new Vector(0, 0, 0)));
+        Assertions.assertTrue(angles.equals(new Vector(0, 0, 0)));
 
         angles.set(1, 1, 1);
 
-        Assert.assertTrue(entity.getAngles().equals(new Vector(0, 0, 0)));
+        Assertions.assertTrue(entity.getAngles().equals(new Vector(0, 0, 0)));
     }
 
     @Test
@@ -25,10 +25,10 @@ public class EntityTest {
 
         Vector position = entity.getPosition();
 
-        Assert.assertTrue(position.equals(new Vector(0, 0, 0)));
+        Assertions.assertTrue(position.equals(new Vector(0, 0, 0)));
 
         position.set(1, 1, 1);
 
-        Assert.assertTrue(entity.getPosition().equals(new Vector(0, 0, 0)));
+        Assertions.assertTrue(entity.getPosition().equals(new Vector(0, 0, 0)));
     }
 }

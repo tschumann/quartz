@@ -9,9 +9,10 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.google.guava:guava:29.0-jre'
+    implementation("com.google.guava:guava:29.0-jre")
 
-    testImplementation 'junit:junit:4.13'
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.6.2")
 }
 
 jar {
@@ -25,9 +26,9 @@ jar {
 
 // this is a big hack because Gradle can't find the classes in src/main when compiling src/test
 sourceSets {
-	test {
-		java.srcDirs = ['src/main/', 'src/test/']
-	}
+    test {
+        java.srcDirs = ['src/main/', 'src/test/']
+    }
 }
 
 tasks.withType(JavaCompile).all {
@@ -39,6 +40,8 @@ test {
         outputs.upToDateWhen {false}
         showStandardStreams = true
     }
+
+    useJUnitPlatform()
 }
 
 jacoco {

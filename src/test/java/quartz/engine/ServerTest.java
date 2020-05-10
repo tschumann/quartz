@@ -1,7 +1,7 @@
 package quartz.engine;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class ServerTest {
 
@@ -9,7 +9,7 @@ public class ServerTest {
     public void testHandleCommand() {
         Server server = new Server();
 
-        Assert.assertTrue(server.handleCommand("quit"));
-        Assert.assertFalse(server.handleCommand("nuke"));
+        Assertions.assertTrue(server.handleCommand("quit"));
+        Assertions.assertFalse(server.handleCommand("nuke"));
     }
 }

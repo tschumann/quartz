@@ -1,11 +1,9 @@
 package quartz.engine.map;
 
-import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class Version1MapLoaderTest {
 
@@ -14,7 +12,7 @@ public class Version1MapLoaderTest {
         List<String> entities = new ArrayList<String>();
         Version1MapLoader loader = new Version1MapLoader();
         loader.loadEntities(new EntitySection(0, entities));
-        assertEquals(0, loader.getEntities().size());
+        Assertions.assertEquals(0, loader.getEntities().size());
     }
 
     @Test
@@ -25,7 +23,7 @@ public class Version1MapLoaderTest {
         entities.add("blah,blah,blah,blah,blah,blah,blah,blah");
         Version1MapLoader loader = new Version1MapLoader();
         loader.loadEntities(new EntitySection(0, entities));
-        assertEquals(0, loader.getEntities().size());
+        Assertions.assertEquals(0, loader.getEntities().size());
     }
 
     @Test
@@ -34,6 +32,6 @@ public class Version1MapLoaderTest {
         entities.add("SpawnEntity,0,0,0,0,0,0");
         Version1MapLoader loader = new Version1MapLoader();
         loader.loadEntities(new EntitySection(0, entities));
-        assertEquals(1, loader.getEntities().size());
+        Assertions.assertEquals(1, loader.getEntities().size());
     }
 }

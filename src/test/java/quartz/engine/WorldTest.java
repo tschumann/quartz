@@ -1,8 +1,8 @@
 package quartz.engine;
 
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import quartz.engine.common.Vector;
 
 public class WorldTest {
@@ -15,6 +15,6 @@ public class WorldTest {
         world.addEntity(entity);
 
         List<IEntity> entitiesInRadius = world.getEntitiesInRadius(new Vector(0, 0, 0), 2);
-        Assert.assertEquals(entitiesInRadius.size(), 1);
+        Assertions.assertEquals(entitiesInRadius.size(), 1);
     }
 }

@@ -1,36 +1,36 @@
 package quartz.engine.common;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class VectorTest {
 
     @Test
     public void testToString() {
         Vector vector = new Vector(1, 2, 3);
-        Assert.assertEquals("(1.0,2.0,3.0)", vector.toString());
+        Assertions.assertEquals("(1.0,2.0,3.0)", vector.toString());
     }
 
     @Test
     public void testGetters() {
         Vector vector = new Vector(3, 4, 5);
-        Assert.assertEquals("The roll is correct", 3, vector.getRoll(), 0.0);
-        Assert.assertEquals("The pitch is correct", 4, vector.getPitch(), 0.0);
-        Assert.assertEquals("The yaw is correct", 5, vector.getYaw(), 0.0);
+        Assertions.assertEquals(3, vector.getRoll(), 0.0, "The roll is correct");
+        Assertions.assertEquals(4, vector.getPitch(), 0.0, "The pitch is correct");
+        Assertions.assertEquals(5, vector.getYaw(), 0.0, "The yaw is correct");
     }
 
     @Test
     public void testEquality() {
         Vector vector = new Vector(1, 1, 1);
 
-        Assert.assertTrue(vector.equals(vector));
+        Assertions.assertTrue(vector.equals(vector));
 
         Object object = new Object();
 
-        Assert.assertFalse(vector.equals(object));
+        Assertions.assertFalse(vector.equals(object));
 
-        Assert.assertTrue(vector.equals(new Vector(1, 1, 1)));
+        Assertions.assertTrue(vector.equals(new Vector(1, 1, 1)));
 
-        Assert.assertFalse(vector.equals(new Vector(1 + Maths.EPSILON, 1  + Maths.EPSILON, 1  + Maths.EPSILON)));
+        Assertions.assertFalse(vector.equals(new Vector(1 + Maths.EPSILON, 1  + Maths.EPSILON, 1  + Maths.EPSILON)));
     }
 }
