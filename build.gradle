@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'application'
-	id 'jacoco'
+    id 'jacoco'
 }
 
 repositories {
@@ -18,7 +18,7 @@ dependencies {
 jar {
     manifest {
         attributes(
-            'Main-Class': 'quartz.Main'
+                'Main-Class': 'quartz.Main'
         )
     }
 }
@@ -29,7 +29,7 @@ tasks.withType(JavaCompile).all {
 
 test {
     testLogging {
-        outputs.upToDateWhen {false}
+        outputs.upToDateWhen { false }
         showStandardStreams = true
     }
 

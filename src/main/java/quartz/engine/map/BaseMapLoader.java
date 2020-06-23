@@ -1,5 +1,6 @@
 package quartz.engine.map;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 import quartz.engine.IEntity;
@@ -19,12 +20,12 @@ public abstract class BaseMapLoader implements IMapLoader {
         IEntity entity = null;
 
         try {
-            entity = (IEntity)Class.forName("quartz.game." + name).newInstance();
+            entity = (IEntity)Class.forName("quartz.game." + name).getDeclaredConstructor().newInstance();
         }
         catch (ClassNotFoundException e) {
             this.logger.Error("Unknown entity " + name);
         }
-        catch (InstantiationException|IllegalAccessException e) {
+        catch (InstantiationException | IllegalAccessException | NoSuchMethodException| InvocationTargetException e) {
             this.logger.Error("Unable to instantiate " + name);
         }
 
