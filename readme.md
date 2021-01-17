@@ -22,3 +22,8 @@ To upgrade Gradle run:
 ```
 ./gradlew wrapper --gradle-version=
 ```
+
+To upgrade dependencies run:
+```
+./gradlew build --refresh-dependencies
+```
