@@ -1,5 +1,7 @@
 package quartz.engine.common;
 
+import java.security.*;
+
 public class Vector {
 
     private float x;
@@ -56,6 +58,11 @@ public class Vector {
         float zComponentDifference = (this.z - vector.z);
 
         return (float)Math.sqrt((xComponentDifference * xComponentDifference) + (yComponentDifference * yComponentDifference) + (zComponentDifference * zComponentDifference));
+    }
+
+    public int hashCode() {
+        // probably not the greatest algorithm
+        return (int)(Math.pow(this.x, 2) + Math.pow(this.y, 3) + Math.pow(this.z, 4));
     }
 
     public String toString() {
