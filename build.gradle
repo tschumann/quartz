@@ -9,10 +9,10 @@ repositories {
 }
 
 dependencies {
-    implementation("com.google.guava:guava:30.1-jre")
+    implementation "com.google.guava:guava:30.1-jre"
 
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.0")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.0")
+    testImplementation "org.junit.jupiter:junit-jupiter-api:5.7.2"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.7.2"
 }
 
 jar {
@@ -29,6 +29,7 @@ tasks.withType(JavaCompile).all {
 
 test {
     testLogging {
+        events "passed", "skipped", "failed"
         outputs.upToDateWhen { false }
         showStandardStreams = true
     }
@@ -37,7 +38,7 @@ test {
 }
 
 jacoco {
-    toolVersion = "0.8.6"
+    toolVersion = "0.8.7"
 }
 
 jacocoTestReport {
